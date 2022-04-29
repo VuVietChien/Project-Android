@@ -1,4 +1,4 @@
-package com.example.appbanhang;
+package com.example.appbanhang.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,6 +15,9 @@ import android.widget.ListView;
 import android.widget.ViewFlipper;
 
 import com.bumptech.glide.Glide;
+import com.example.appbanhang.R;
+import com.example.appbanhang.adapter.LoaiSpAdapter;
+import com.example.appbanhang.model.LoaiSp;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -27,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     ListView listViewManHinhChinh;
     DrawerLayout drawerLayout;
+    LoaiSpAdapter loaiSpAdapter;
+    List<LoaiSp> mangloaisp;
 
 
     @Override
@@ -83,5 +88,10 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.navigationview);
         listViewManHinhChinh = findViewById(R.id.listviewmanhhinh);
         drawerLayout = findViewById(R.id.drawerlayout);
+        //khoi tao list
+        mangloaisp=new ArrayList<>();
+        //khoi tao adapter
+        loaiSpAdapter = new LoaiSpAdapter(getApplicationContext(),mangloaisp);
+        listViewManHinhChinh.setAdapter(loaiSpAdapter);
     }
 }
