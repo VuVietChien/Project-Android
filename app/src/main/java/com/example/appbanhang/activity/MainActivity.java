@@ -14,11 +14,23 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ViewFlipper;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.example.appbanhang.R;
 import com.example.appbanhang.adapter.LoaiSpAdapter;
 import com.example.appbanhang.model.LoaiSp;
+import com.example.appbanhang.ultil.Checkconnection;
+import com.example.appbanhang.ultil.server;
 import com.google.android.material.navigation.NavigationView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +43,10 @@ public class MainActivity extends AppCompatActivity {
     ListView listViewManHinhChinh;
     DrawerLayout drawerLayout;
     LoaiSpAdapter loaiSpAdapter;
-    List<LoaiSp> mangloaisp;
+    ArrayList<LoaiSp> mangloaisp;
+    int id=0;
+    String tenloaisanpham="";
+    String hinhanhloaisanpham="";
 
 
     @Override
@@ -39,8 +54,49 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         anhxa();
-        ActionBar();
-        ActionViewFlipper();
+        if(Checkconnection.haveNetworkConnection(getApplicationContext())){
+            ActionBar();
+            ActionViewFlipper();
+            GetDuLieuLoaisp();
+        }else {
+            Checkconnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
+            finish();
+        }
+
+    }
+
+    private void GetDuLieuLoaisp() {
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, server.DuongdanLoaisp,null, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                if(response != null){
+                for (int i = 0; i < response.length(); i++) {
+                    try {
+                        JSONObject jsonObject = response.getJSONObject(i);
+                        id = jsonObject.getInt("id");
+                        tenloaisanpham = jsonObject.getString("tenloaisanpham");
+                        hinhanhloaisanpham = jsonObject.getString("hinhanhloaisanpham");
+                        mangloaisp.add(new LoaiSp(id, tenloaisanpham, hinhanhloaisanpham));
+                        loaiSpAdapter.notifyDataSetChanged();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+//                mangloaisp.add( new LoaiSp(0, "Liên Hệ", "https://ngochieu.name.vn/img/contact.png"));
+//                mangloaisp.add( new LoaiSp(0, "Thông Tin", ""));
+            }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Checkconnection.ShowToast_Short(getApplicationContext(),error.toString());
+            }
+        });
+        requestQueue.add(jsonArrayRequest);
     }
 
     private void ActionViewFlipper() {
@@ -91,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
         //khoi tao list
         mangloaisp=new ArrayList<>();
         //khoi tao adapter
-        loaiSpAdapter = new LoaiSpAdapter(getApplicationContext(),mangloaisp);
+        loaiSpAdapter = new LoaiSpAdapter(mangloaisp,getApplicationContext());
         listViewManHinhChinh.setAdapter(loaiSpAdapter);
     }
 }

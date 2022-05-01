@@ -12,35 +12,35 @@ import com.bumptech.glide.Glide;
 import com.example.appbanhang.R;
 import com.example.appbanhang.model.LoaiSp;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class LoaiSpAdapter extends BaseAdapter {
-    List<LoaiSp> array;
-    Context context;
+   ArrayList<LoaiSp> arrayList;
+   Context context;
 
-    public LoaiSpAdapter(Context context,List<LoaiSp> array) {
-        this.array = array;
+    public LoaiSpAdapter(ArrayList<LoaiSp> arrayList, Context context) {
+        this.arrayList = arrayList;
         this.context = context;
     }
 
     @Override
     public int getCount() {
-        return array.size();
+        return arrayList.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return arrayList.get(i);
     }
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return i;
     }
 
     public class ViewHolder{
-        TextView textensp;
-        ImageView imghinhanh;
+        TextView txttenloaisp;
+        ImageView imgloaisp;
     }
 
     @Override
@@ -49,15 +49,17 @@ public class LoaiSpAdapter extends BaseAdapter {
         if(view == null){
             viewHolder = new ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view=layoutInflater.inflate(R.layout.item_sanpham,null);
-            viewHolder.textensp = view.findViewById(R.id.item_tensp);
-            viewHolder.imghinhanh = view.findViewById(R.id.item_image);
+            view=layoutInflater.inflate(R.layout.dong_listview_loaisp,null);
+            viewHolder.txttenloaisp = view.findViewById(R.id.textviewloaisp);
+            viewHolder.imgloaisp = view.findViewById(R.id.imageviewloaisp);
             view.setTag(viewHolder);
         }else {
             viewHolder = (ViewHolder) view.getTag();
-            viewHolder.textensp.setText(array.get(i).getTensanpham());
-            Glide.with(context).load(array.get(i).getHinhanh()).into(viewHolder.imghinhanh);
         }
+        LoaiSp loaiSp =(LoaiSp) getItem(i);
+        viewHolder.txttenloaisp.setText(loaiSp.getTenloaisp());
+        Glide.with(context).load(loaiSp.getHinhanhloaisp()).into(viewHolder.imgloaisp);
+
         return view;
     }
 }

@@ -2,13 +2,13 @@ package com.example.appbanhang.model;
 
 public class LoaiSp {
     int id;
-    String tensanpham;
-    String hinhanh;
+    String Tenloaisp;
+    String Hinhanhloaisp;
 
-    public LoaiSp(int id, String tensanpham, String hinhanh) {
+    public LoaiSp(int id, String tenloaisp, String hinhanhloaisp) {
         this.id = id;
-        this.tensanpham = tensanpham;
-        this.hinhanh = hinhanh;
+        this.Tenloaisp = tenloaisp;
+        this.Hinhanhloaisp = hinhanhloaisp;
     }
 
     public int getId() {
@@ -19,19 +19,19 @@ public class LoaiSp {
         this.id = id;
     }
 
-    public String getTensanpham() {
-        return tensanpham;
+    public String getTenloaisp() {
+        return Tenloaisp;
     }
 
-    public void setTensanpham(String tensanpham) {
-        this.tensanpham = tensanpham;
+    public void setTenloaisp(String tenloaisp) {
+        Tenloaisp = tenloaisp;
     }
 
-    public String getHinhanh() {
-        return hinhanh;
+    public String getHinhanhloaisp() {
+        return Hinhanhloaisp;
     }
 
-    public void setHinhanh(String hinhanh) {
-        this.hinhanh = hinhanh;
+    public void setHinhanhloaisp(String hinhanhloaisp) {
+        Hinhanhloaisp = hinhanhloaisp;
     }
 }
