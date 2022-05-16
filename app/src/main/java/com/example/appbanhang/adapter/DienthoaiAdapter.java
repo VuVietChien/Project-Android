@@ -69,7 +69,6 @@ public class DienthoaiAdapter extends BaseAdapter {
         viewHolder.txtmotadienthoai.setEllipsize(TextUtils.TruncateAt.END);
         viewHolder.txtmotadienthoai.setText(sanpham.getMotasanpham());
         Glide.with(context).load(sanpham.getHinhanhsanpham()).into(viewHolder.imgdienthoai);
-
         return view;
     }
 }

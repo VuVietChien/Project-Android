@@ -1,5 +1,6 @@
 package com.example.appbanhang.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -29,6 +32,7 @@ import com.bumptech.glide.Glide;
 import com.example.appbanhang.R;
 import com.example.appbanhang.adapter.LoaiSpAdapter;
 import com.example.appbanhang.adapter.SanphamAdapter;
+import com.example.appbanhang.model.Giohang;
 import com.example.appbanhang.model.LoaiSp;
 import com.example.appbanhang.model.Sanpham;
 import com.example.appbanhang.ultil.Checkconnection;
@@ -53,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<LoaiSp> mangloaisp;
     ArrayList<Sanpham> mangsanpham;
     SanphamAdapter sanphamAdapter;
+    public  static  ArrayList<Giohang> manggiohang;
     int id=0;
     String tenloaisanpham="";
     String hinhanhloaisanpham="";
@@ -74,6 +79,22 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case  R.id.menugiohang:
+                Intent intent  = new Intent(getApplicationContext(), com.example.appbanhang.activity.Giohang.class);
+                startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
     }
 
     private void CatchOnItemListView() {
@@ -264,5 +285,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewManHinhChinh.setHasFixedSize(true);
         recyclerViewManHinhChinh.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerViewManHinhChinh.setAdapter(sanphamAdapter);
+        if(manggiohang != null){
+
+        }else{
+            manggiohang = new ArrayList<>();
+        }
     }
 }
