@@ -13,11 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppBanHang"
         android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".activity.ThongTinActivity"
+            android:exported="false"
+            android:label="@string/title_activity_thong_tin" />
+        <activity
+            android:name=".activity.Thongtinkhachhang"
+            android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ThongTinActivity"
+            android:name=".activity.Giohang"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ChiTietSanPham"
             android:exported="false" />
         <activity
             android:name=".activity.LienHeActivity"
