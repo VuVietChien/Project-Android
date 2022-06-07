@@ -58,6 +58,8 @@ public class LaptopActivity extends AppCompatActivity {
         GetIDLoaisp();
         ActionToolbar();
         LoadMoreData();
+
+        GetData(page);
     }
     private void GetData(int page) {
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
@@ -169,10 +171,14 @@ public class LaptopActivity extends AppCompatActivity {
     }
 
     private void Anhxa() {
-        lvLaptop = findViewById(R.id.listviedienthoai);
+        lvLaptop = findViewById(R.id.listviewlaptop);
         mangLaptop = new ArrayList<>();
         lapTopAdapter = new LapTopAdapter(getApplicationContext(), mangLaptop);
         lvLaptop.setAdapter(lapTopAdapter);
+        
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        footerview = inflater.inflate(R.layout.progress_bar, null);
+        mHandler = new LaptopActivity.mHandler();
 
     }
     public class mHandler extends Handler {
