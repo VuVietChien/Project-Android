@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,71 +14,37 @@
         android:layout_alignParentTop="true" />
 
     <LinearLayout
-        android:orientation="vertical"
-        android:background="@drawable/hinhnenlienhe"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/hinhnenlienhe"
+        android:orientation="vertical">
+
         <TextView
-            android:text="Liên hệ với chúng tôi"
-            android:textSize="30sp"
-            android:gravity="center"
-            android:layout_margin="10dp"
-            android:textColor="#fafafa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
-        <LinearLayout
-            android:background="@drawable/boder"
-            android:layout_gravity="center"
+            android:layout_margin="10dp"
             android:gravity="center"
-            android:layout_margin="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:drawableLeft="@color/white"
-                android:gravity="center"
-                android:layout_margin="30dp"
-                android:textSize="18dp"
-                android:textColor="#000000"
-                android:text="Họ và tên: Nguyễn Văn Đạt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+            android:text="Liên hệ với chúng tôi"
+            android:textColor="#fafafa"
+            android:textSize="25sp" />
 
         <LinearLayout
-            android:background="@drawable/boder"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_margin="30dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:drawableLeft="@color/white"
-                android:gravity="center"
-                android:layout_margin="30dp"
-                android:textSize="18dp"
-                android:textColor="#000000"
-                android:text="Email: nguyendatdz01@gmail.com"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:background="@drawable/boder"
+            android:gravity="center">
 
-        <LinearLayout
-            android:background="@drawable/boder"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_margin="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
                 android:drawableLeft="@color/white"
                 android:gravity="center"
-                android:layout_margin="30dp"
-                android:textSize="18dp"
+                android:text="LỚp 70DCTT23 Khoa CNTT"
                 android:textColor="#000000"
-                android:text="Điện thoại: 0978695998"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textSize="18dp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
