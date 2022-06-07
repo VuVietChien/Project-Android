@@ -112,7 +112,7 @@ public class ChiTietSanPham extends AppCompatActivity {
         IDsanpham = sanpham.getIDSanpham();
         txtten.setText(Tenchitiet);
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
-        txtgia.setText(MessageFormat.format("Giá : {0} vnd", decimalFormat.format(Giachitiet)));
+        txtgia.setText(MessageFormat.format("Giá : {0} VNĐ", decimalFormat.format(Giachitiet)));
         txtmota.setText(Motachitiet);
         ImageView imageView = new ImageView(getApplicationContext());
         Glide.with(getApplicationContext()).load(Hinhanhchitiet).into(imgChiTiet);

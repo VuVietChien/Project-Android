@@ -32,6 +32,25 @@
         <entry key="..\:/HocMisa/java/Project-Android/app/src/main/res/layout/toolbar_lienhe.xml" value="0.25" />
         <entry key="..\:/HocMisa/java/Project-Android/app/src/main/res/layout/toolbar_thongtin.xml" value="0.25" />
         <entry key="..\:/HocMisa/java/Project-Android/app/src/main/res/menu/menu.xml" value="0.25" />
+        <entry key="..\:/Project-Android/app/src/main/res/drawable/button_background_blue.xml" value="0.2315" />
+        <entry key="..\:/Project-Android/app/src/main/res/drawable/spinner.xml" value="0.2025" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_cap_nhat_tai_khoan.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_chi_tiet_san_pham.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_dien_thoai.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_giohang2.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_gophang.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_laptop.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_lien_he.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_maps.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_sendmail.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_splashscreen.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/fragment_maps.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/toolbar_chitietsanpham.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/toolbar_lienhe.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/menu/menu.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.231" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Project-Android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Project-Android/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Project-Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />

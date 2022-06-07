@@ -14,6 +14,7 @@
         android:theme="@style/Theme.AppBanHang"
         android:usesCleartextTraffic="true">
 
+
         <activity
             android:name=".activity.ThongTinActivity"
             android:exported="false"
@@ -34,6 +35,26 @@
             android:name=".activity.LienHeActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.CapNhatTaiKhoan"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SendMailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false" />
+        <activity
             android:name=".activity.LaptopActivity"
             android:exported="false" />
         <activity
@@ -42,11 +63,7 @@
         <activity
             android:name=".activity.splashscreen"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

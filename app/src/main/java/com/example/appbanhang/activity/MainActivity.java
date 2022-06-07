@@ -1,6 +1,7 @@
 package com.example.appbanhang.activity;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -8,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<LoaiSp> mangloaisp;
     ArrayList<Sanpham> mangsanpham;
     SanphamAdapter sanphamAdapter;
-    public  static  ArrayList<Giohang> manggiohang;
+    public static  ArrayList<Giohang> manggiohang;
     int id=0;
     String tenloaisanpham="";
     String hinhanhloaisanpham="";
@@ -78,7 +80,25 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        MainActivity.this.finish();
+                    }
+                })
+                .setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
 
+    }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -132,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
                     case 3:
                         if(Checkconnection.haveNetworkConnection(getApplicationContext())){
                             Intent intent= new Intent(MainActivity.this,LienHeActivity.class);
-                            intent.putExtra("idloaisanpham",mangloaisp.get(i).getId());
                             startActivity(intent);
                         }else {
                             Checkconnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
@@ -142,7 +161,34 @@ public class MainActivity extends AppCompatActivity {
                     case 4:
                         if(Checkconnection.haveNetworkConnection(getApplicationContext())){
                             Intent intent= new Intent(MainActivity.this, ThongTinActivity.class);
-                            intent.putExtra("idloaisanpham",mangloaisp.get(i).getId());
+                            startActivity(intent);
+                        }else {
+                            Checkconnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 5:
+                        if(Checkconnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent= new Intent(MainActivity.this, CapNhatTaiKhoan.class);
+                            startActivity(intent);
+                        }else {
+                            Checkconnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 6:
+                        if(Checkconnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent= new Intent(MainActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }else {
+                            Checkconnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case 7:
+                        if(Checkconnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent= new Intent(MainActivity.this, SendMailActivity.class);
                             startActivity(intent);
                         }else {
                             Checkconnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
