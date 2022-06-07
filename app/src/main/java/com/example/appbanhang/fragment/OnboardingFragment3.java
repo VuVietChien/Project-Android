@@ -10,6 +10,7 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 
 import com.example.appbanhang.R;
+import com.example.appbanhang.activity.LoginActivity;
 import com.example.appbanhang.activity.MainActivity;
 
 public class OnboardingFragment3 extends Fragment {
@@ -21,8 +22,6 @@ private View mView;
 
     }
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,7 +31,7 @@ private View mView;
         btnstart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
                 getActivity().startActivity(intent);
             }
         });
