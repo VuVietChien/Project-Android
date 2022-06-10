@@ -44,6 +44,7 @@
         <entry key="..\:/Project-Android/app/src/main/res/drawable/button_background_blue.xml" value="0.2315" />
         <entry key="..\:/Project-Android/app/src/main/res/drawable/spinner.xml" value="0.2025" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_cap_nhat_tai_khoan.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_change_password.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_chi_tiet_san_pham.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_dien_thoai.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_giohang2.xml" value="0.371875" />
@@ -56,6 +57,7 @@
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_splashscreen.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/fragment_maps.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/toolbar_cap_nhat_tai_khoan.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/toolbar_chitietsanpham.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/toolbar_lienhe.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/menu/menu.xml" value="0.371875" />

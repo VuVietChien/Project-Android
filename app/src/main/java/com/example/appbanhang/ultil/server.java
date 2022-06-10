@@ -11,4 +11,8 @@ public class server {
     public static String Duongdanchitietdonhang="http://" + localhost + "/projectandroid/chitietdonhang.php";
     public static String Duongdandangnhap="http://" + localhost + "/projectandroid/authentication/login.php";
     public static String Duongdandangky="http://" + localhost + "/projectandroid/authentication/register.php";
+    public static String Duongdandoimatkhau="http://" + localhost + "/projectandroid/authentication/changepassword.php";
+    public static String Duongdancapnhatthongtintaikhoan="http://" + localhost + "/projectandroid/authentication/update_info.php";
+
+
 }
