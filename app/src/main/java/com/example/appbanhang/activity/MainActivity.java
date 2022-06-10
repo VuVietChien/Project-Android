@@ -62,11 +62,19 @@ public class MainActivity extends AppCompatActivity {
     String tenloaisanpham="";
     String hinhanhloaisanpham="";
 
+    String fullname,phone_number,email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Lay du lieu tu LoginActivity
+        Intent i = getIntent();
+        fullname = i.getStringExtra("fullname");
+        phone_number = i.getStringExtra("phone_number");
+        email = i.getStringExtra("email");
+
+
         anhxa();
         if(Checkconnection.haveNetworkConnection(getApplicationContext())){
             ActionBar();
@@ -169,7 +177,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 5:
                         if(Checkconnection.haveNetworkConnection(getApplicationContext())){
+
                             Intent intent= new Intent(MainActivity.this, CapNhatTaiKhoan.class);
+                            intent.putExtra("fullname",fullname);
+                            intent.putExtra("phone_number",phone_number);
+                            intent.putExtra("email",email);
                             startActivity(intent);
                         }else {
                             Checkconnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
@@ -254,6 +266,7 @@ public class MainActivity extends AppCompatActivity {
                         id = jsonObject.getInt("id");
                         tenloaisanpham = jsonObject.getString("tenloaisanpham");
                         hinhanhloaisanpham = jsonObject.getString("hinhanhloaisanpham");
+
                         mangloaisp.add(new LoaiSp(id, tenloaisanpham, hinhanhloaisanpham));
                         loaiSpAdapter.notifyDataSetChanged();
                     } catch (JSONException e) {
@@ -261,8 +274,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-
-
             }
         }, new Response.ErrorListener() {
             @Override

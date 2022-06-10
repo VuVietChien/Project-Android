@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nhập Email của bạn:"
+            android:text="Nhập Email của khách hàng:"
             android:textColor="@color/black" />
 
         <EditText

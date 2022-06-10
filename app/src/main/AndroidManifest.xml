@@ -41,6 +41,9 @@
             android:name=".activity.SendMailActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.DoiMatKhau"
+            android:exported="false" />
+        <activity
             android:name=".activity.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:exported="true" >
