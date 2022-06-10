@@ -25,6 +25,7 @@ public class OnboardingActivity extends AppCompatActivity {
 
     private ViewPagerAdapter viewPagerAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

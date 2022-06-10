@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.appbanhang.R;
 import com.example.appbanhang.activity.LoginActivity;
-import com.example.appbanhang.activity.MainActivity;
+import com.example.appbanhang.ultil.DatalocalManager;
 
 public class OnboardingFragment3 extends Fragment {
 
@@ -28,10 +28,14 @@ private View mView;
         // Inflate the layout for this fragment
         mView = inflater.inflate(R.layout.fragment_onboarding3, container, false);
         btnstart = mView.findViewById(R.id.btn_start);
+
         btnstart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), LoginActivity.class);
+                DatalocalManager.setFirstInstalled(true);
+                DatalocalManager.setFirstInstalled3(true);
+
                 getActivity().startActivity(intent);
             }
         });
