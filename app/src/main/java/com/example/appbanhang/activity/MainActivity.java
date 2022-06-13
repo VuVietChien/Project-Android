@@ -36,6 +36,7 @@ import com.example.appbanhang.model.Giohang;
 import com.example.appbanhang.model.LoaiSp;
 import com.example.appbanhang.model.Sanpham;
 import com.example.appbanhang.ultil.Checkconnection;
+import com.example.appbanhang.ultil.DatalocalManager;
 import com.example.appbanhang.ultil.server;
 import com.google.android.material.navigation.NavigationView;
 
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             GetDuLieuLoaisp();
             GetDuLieuSPMoiNhat();
             CatchOnItemListView();
+
         }else {
             Checkconnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
             finish();
@@ -191,6 +193,9 @@ public class MainActivity extends AppCompatActivity {
                     case 6:
                         if(Checkconnection.haveNetworkConnection(getApplicationContext())){
                             Intent intent= new Intent(MainActivity.this, LoginActivity.class);
+                            DatalocalManager.setFirstInstalled3(false);
+                            DatalocalManager.setFirstInstalled2(false);
+
                             startActivity(intent);
                             finish();
                         }else {
@@ -286,9 +291,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void ActionViewFlipper() {
         List<String> mangquangcao = new ArrayList<>();
-        mangquangcao.add("http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-Le-hoi-phu-kien-800-300.png");
-        mangquangcao.add("http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-HC-Tra-Gop-800-300.png");
-        mangquangcao.add("http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-big-ky-nguyen-800-300.jpg");
+        mangquangcao.add("https://clickbuy.cdn.vccloud.vn/uploads/2022/05/slide-redmi-9a-01-1024x497.png");
+        mangquangcao.add("https://anphat.com.vn/media/banner/20_Apraccb25577bde20ec6cec2ffc26e5d4b5.jpg");
+        mangquangcao.add("https://cdn2.cellphones.com.vn/690x300/https://dashboard.cellphones.com.vn/storage/Tab%20s7.png");
+        mangquangcao.add("https://cdn.hoanghamobile.com/i/home/Uploads/2022/05/31/webb-xiaomi1.jpg");
+        mangquangcao.add("https://theme.hstatic.net/1000026716/1000440777/14/slideshow_10.jpg?v=26310");
+
+
 
         for (int i = 0 ; i<mangquangcao.size(); i++)
         {
@@ -298,7 +307,7 @@ public class MainActivity extends AppCompatActivity {
             viewFlipper.addView(imageView);
         }
 
-        viewFlipper.setFlipInterval(3000);
+        viewFlipper.setFlipInterval(5000);
         viewFlipper.setAutoStart(true);
 
         Animation slide_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in_right);

@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
-
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawerlayout"
         android:layout_width="match_parent"
@@ -27,28 +26,30 @@
             <ViewFlipper
                 android:id="@+id/viewflipper"
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="150dp">
             </ViewFlipper>
 
             <LinearLayout
                 android:orientation="vertical"
-                android:background="#E8C95A"
+                android:background="#F3F2EE"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="sản phẩm mới nhất"
+                    android:text="Sản phẩm mới nhất"
                     android:textSize="20dp"
                     android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     android:textStyle="bold"
                     android:textColor="#C11717"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content">
 
                 </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>

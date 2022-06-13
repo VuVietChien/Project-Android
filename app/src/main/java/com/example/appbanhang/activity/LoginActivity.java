@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.apachat.loadingbutton.core.customViews.CircularProgressButton;
 import com.example.appbanhang.R;
+import com.example.appbanhang.ultil.DatalocalManager;
 import com.example.appbanhang.ultil.server;
 
 import org.json.JSONArray;
@@ -26,6 +28,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import android.view.View;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -42,9 +45,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 login();
+
             }
+
         });
     }
+
+
 
     public void login() {
 
@@ -103,12 +110,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    public void onLoginClick(View view) {
-        startActivity(new Intent(this, RegisterActivity.class));
-        overridePendingTransition(R.anim.slide_in_right, R.anim.stay);
-    }
-
-    public void mapping() {
+        public void onLoginClick(View view){
+            startActivity(new Intent(this, RegisterActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.stay);
+        }
+    private void mapping() {
         edtTextEmailLogin = findViewById(R.id.edtTextEmailLogin);
         edtTextPasswordLogin = findViewById(R.id.edtTextPasswordLogin);
         cirLoginButton = findViewById(R.id.cirLoginButton);

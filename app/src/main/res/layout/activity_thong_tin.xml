@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/toolbar_thongtin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:text="Thông tin về chúng tôi"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/themeColor"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:padding="20dp"
+        android:drawablePadding="20dp"
+        android:drawableLeft="@drawable/address"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Địa chỉ: 54 P. Triều Khúc, Thanh Xuân Nam, Thanh Xuân, Hà Nội, Việt Nam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.ThongTinActivity" />
+
+</LinearLayout>

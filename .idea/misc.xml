@@ -34,6 +34,7 @@
         <entry key="..\:/HocMisa/java/Project-Android/app/src/main/res/layout/toolbar_thongtin.xml" value="0.25" />
         <entry key="..\:/HocMisa/java/Project-Android/app/src/main/res/menu/menu.xml" value="0.25" />
         <entry key="..\:/Project-Android/app/src/main/res/drawable/button_background_blue.xml" value="0.2315" />
+        <entry key="..\:/Project-Android/app/src/main/res/drawable/ic_side_bg.xml" value="0.2315" />
         <entry key="..\:/Project-Android/app/src/main/res/drawable/spinner.xml" value="0.2025" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_cap_nhat_tai_khoan.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_change_password.xml" value="0.371875" />
@@ -44,10 +45,13 @@
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_laptop.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_lien_he.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_main.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_maps.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_sendmail.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_splashscreen.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_thong_tin.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/activity_thong_tin2.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/dong_dienthoai.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/dong_giohang.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/dong_laptop.xml" value="0.371875" />
