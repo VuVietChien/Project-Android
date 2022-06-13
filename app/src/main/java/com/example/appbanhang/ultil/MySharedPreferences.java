@@ -28,8 +28,4 @@ public class MySharedPreferences {
         return sharedPreferences.getBoolean(key,true);
     }
 
-    public boolean getBooleanValue3(String key){
-        SharedPreferences sharedPreferences = mContext.getSharedPreferences(MY_SHARED_PREFERENCES,Context.MODE_PRIVATE);
-        return sharedPreferences.getBoolean(key,false);
-    }
 }

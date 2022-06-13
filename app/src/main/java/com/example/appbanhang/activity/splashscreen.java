@@ -21,28 +21,24 @@ if(!DatalocalManager.getFirstInstalled()) {
         @Override
         public void run() {
             startActivity(new Intent(splashscreen.this, OnboardingActivity.class));
+            DatalocalManager.setFirstInstalled(true);
         }
     }, 1000);
-}
-if(!DatalocalManager.getFirstInstalled2()){
+}else if(!DatalocalManager.getFirstInstalled2()){
     new Handler().postDelayed(new Runnable() {
         @Override
         public void run() {
             startActivity(new Intent(splashscreen.this, LoginActivity.class));
+            DatalocalManager.setFirstInstalled2(true);
         }
     }, 2000);
-
-}
-
-        if(DatalocalManager.getFirstInstalled3()){
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    startActivity(new Intent(splashscreen.this, MainActivity.class));
-                }
-            }, 2000);
-
+}else {
+    new Handler().postDelayed(new Runnable() {
+        @Override
+        public void run() {
+            startActivity(new Intent(splashscreen.this, MainActivity.class));
         }
-
+    }, 1000);
+}
     }
 }
