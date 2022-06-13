@@ -193,9 +193,7 @@ public class MainActivity extends AppCompatActivity {
                     case 6:
                         if(Checkconnection.haveNetworkConnection(getApplicationContext())){
                             Intent intent= new Intent(MainActivity.this, LoginActivity.class);
-                            DatalocalManager.setFirstInstalled3(false);
                             DatalocalManager.setFirstInstalled2(false);
-
                             startActivity(intent);
                             finish();
                         }else {

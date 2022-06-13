@@ -1,8 +1,6 @@
 package com.example.appbanhang.ultil;
 
 public class server {
-
-
     public static String localhost="192.168.1.11";
     public static String DuongdanLoaisp="http://" + localhost + "/projectandroid/getloaisp.php";
     public static String Duongdansanphammoinhat="http://" + localhost + "/projectandroid/getspmoinhat.php";
@@ -13,6 +11,4 @@ public class server {
     public static String Duongdandangky="http://" + localhost + "/projectandroid/authentication/register.php";
     public static String Duongdandoimatkhau="http://" + localhost + "/projectandroid/authentication/changepassword.php";
     public static String Duongdancapnhatthongtintaikhoan="http://" + localhost + "/projectandroid/authentication/update_info.php";
-
-
 }

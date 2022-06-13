@@ -34,7 +34,7 @@ private View mView;
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), LoginActivity.class);
                 DatalocalManager.setFirstInstalled(true);
-                DatalocalManager.setFirstInstalled3(true);
+//                DatalocalManager.setFirstInstalled3(true);
 
                 getActivity().startActivity(intent);
             }

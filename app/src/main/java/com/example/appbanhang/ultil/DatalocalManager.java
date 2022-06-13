@@ -30,9 +30,6 @@ public class DatalocalManager {
         DatalocalManager.getInstance().mySharedPreferences.putBooleanValue(PREF_FIRST2,isFirst2);
     }
 
-    public static void setFirstInstalled3(boolean isFirst3){
-        DatalocalManager.getInstance().mySharedPreferences.putBooleanValue(PREF_FIRST2,isFirst3);
-    }
 
     public static Boolean getFirstInstalled(){
        return DatalocalManager.getInstance().mySharedPreferences.getBooleanValue(PREF_FIRST);
@@ -40,7 +37,5 @@ public class DatalocalManager {
     public static Boolean getFirstInstalled2(){
         return DatalocalManager.getInstance().mySharedPreferences.getBooleanValue2(PREF_FIRST2);
     }
-    public static Boolean getFirstInstalled3(){
-        return DatalocalManager.getInstance().mySharedPreferences.getBooleanValue3(PREF_FIRST3);
-    }
+
 }
