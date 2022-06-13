@@ -48,10 +48,18 @@
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_sendmail.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/activity_splashscreen.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/dong_dienthoai.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/dong_giohang.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/dong_laptop.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/dong_listview_loaisp.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/dong_spmoi.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/fragment_maps.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/progress_bar.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/toolbar_cap_nhat_tai_khoan.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/toolbar_chitietsanpham.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/toolbar_giohang.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/layout/toolbar_lienhe.xml" value="0.371875" />
+        <entry key="..\:/Project-Android/app/src/main/res/layout/toolbar_thongtin.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/menu/menu.xml" value="0.371875" />
         <entry key="..\:/Project-Android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.231" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Project-Android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />

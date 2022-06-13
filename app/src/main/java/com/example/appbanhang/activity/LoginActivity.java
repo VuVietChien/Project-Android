@@ -113,5 +113,4 @@ public class LoginActivity extends AppCompatActivity {
         edtTextPasswordLogin = findViewById(R.id.edtTextPasswordLogin);
         cirLoginButton = findViewById(R.id.cirLoginButton);
     }
-
 }
